@@ -1,5 +1,7 @@
 billistic
 =========
 
-UI design
+Responsive UI design for billistic.
+
+
 
