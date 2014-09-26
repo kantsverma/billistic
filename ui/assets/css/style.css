@@ -1,0 +1,103 @@
+html.landing-page {
+	background:url('../images/wall-street-bull.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+html.landing-page body {
+	background:transparent;
+}
+
+.front-card {
+    width: 838px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin: -154px 0 0 -418px;
+    height: 328px;
+}
+
+.front-welcome {
+	border-radius: 4px;
+    border: 1px solid #333;
+	width:525px;
+	height:329px;
+	background-color: #eee;
+}
+
+.callout-copy {
+	width:180px;
+	text-align: center;
+	margin: 80px 0 0 30px;
+}
+
+.callout-copy h1 {
+	color:#50769E;
+	border-bottom: 1px solid #333	;
+}
+
+.front-welcome img {
+	position:relative;
+	left:0px;
+	top:-260px;
+	float:right;
+}
+
+.login-form {
+	position:absolute;
+	top:0;
+	right:0;
+	width: 302px;
+	height: 110px;
+	background-color: #eee;
+	border-radius: 4px;
+	border:1px solid #aaa;
+}
+
+.signup-form {
+	position:absolute;
+	top:121px;
+	right:0;
+	width: 302px;
+	height: 208px;
+	background-color: #eee;
+	border-radius: 4px;
+	border:1px solid #aaa;
+}
+
+.login-form form,.signup-form form {
+	margin:12px;
+}
+
+.login-form input, .signup-form input {
+	border-radius: 4px;
+}
+
+input.full-field {
+	width:264px;
+}
+
+.login-form input.short-field {
+	width:195px;
+	margin-right: 5px;
+}
+
+.signup-form h4 {
+	border-bottom:1px solid #aaa;
+	padding: 0 0 8px 8px;
+	font-weight: 300;
+	color:#666;
+}
+
+.signup-form h4 strong {
+	color:#333;
+}
+
+.signup-form button {
+	color:#333;
+	font-size:14px;
+	position:relative;
+	left:134px;
+	margin-top:4px;
+}

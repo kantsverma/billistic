@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <title>Billistic.com | Online Bill Management | Sign Up</title>
+    <!-- we need jQuery in the body so load here -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- Google Fonts, Lato, Light, Normal and Bold. -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome css -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]
+  -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/billistic.css" rel="stylesheet">-->
+</head>
+<body>
+<div id="page">
+	<div class="content">
+		<div class="inner-container">
+			<a href="/billistic">
+				<img src="img/header_logo_bw.png" class="inner_logo" alt="Billistic"/>
+			</a>
+			<div></div>
+			<div class="header-with-line">
+				<span>SIGN UP</span>
+			</div>
+			<div></div>
+			<form action="" method="post" name="signupForm">
+				<input type="text" id="firstName" name="firstName" placeholder="First Name" required="required" />
+				<input type="text" id="lastName" name="lastName" placeholder="Last Name" required="required" />
+				<input type="email" id="email" name="email" placeholder="Email Address" required="required" required="required" />
+				<input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number for Text Notify" />
+				
+				<div class="">
+					<select id="mobileType" name="mobileType" placeholder="Mobile Device Type">
+						<option> Please select </option>
+						<option>Type one</option>
+						<option>Type two</option>
+						<option>Type three</option>
+					</select>
+				</div>
+				
+				<input type="text" id="notificationMethod" name="notificationMethod" placeholder="Preferred Notification Method" />
+				<input type="email" id="billisticEmail" name="billisticEmail" placeholder="Billistic Email Address - Billers to Use" required="required" />
+
+				<input type="text" id="username" name="username" placeholder="User Name or Email" required="required" />
+				<input type="password" id="password" name="password" placeholder="Password"  required="required"/>
+
+				<div class="">
+					<select id="mobileType" name="mobileType" placeholder="Select Challenge Question">
+						<option> Please select </option>
+						<option>What's the zip code for the hospital you were born in?</option>
+						<option>Who's your great grandfather's favorite comedian</option>
+						<option>What is the middle name of your third-cousin twice-removed?</option>
+						<option>Who is the favorite artist of your first pet?</option>
+					</select>
+				</div>
+
+				<input type="text" id="challengeAnswer" name="challengeAnswer" placeholder="Challenge Answer" />
+
+				<div class="">
+					<select id="mobileType" name="mobileType" placeholder="Enter Name of Company that Bills You">
+						<option> Please select </option>
+						<option>AT&T Wireless</option>
+						<option>Aurora Water</option>
+						<option>Comcast</option>
+						<option>SallieMae College Loan</option>
+						<option>Xcel Energy</option>
+						<option>Verizon Business</option>
+						<option>Verizon Communications</option>
+						<option>Verizon Online</option>
+						<option>Verizon Wireless</option>
+					</select>
+				</div>
+				<input type="submit" value="SIGN UP" style="background-color:#18a8c2;color:#fff;border:3px solid #18a8c2">
+		</form>
+		</div>
+    </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

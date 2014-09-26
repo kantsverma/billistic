@@ -1,0 +1,83 @@
+
+
+
+
+#login-form {
+	position: absolute;
+	top: 74px;
+	right: 0px;
+	z-index: 3;
+	background-color: rgba(0,0,0,0.75);
+	padding: 0 10px 8px 8px;
+	border-left: 1px solid silver;
+	border-bottom: 1px solid silver;
+	border-bottom-left-radius: 13px;
+	border-top: 1px solid black;
+	display:none;
+}
+
+#login-form input {
+	width: 120px;
+	border:1px solid silver;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; /* future proofing */
+	-khtml-border-radius: 5px; /* for old Konqueror browsers */
+}
+
+.landscape {
+	width:640px;
+	height:480px;
+}
+
+.portrait {
+	width:360px;
+	height:270px;
+}
+
+#sliding-menu .button:before {
+	width:16px;
+	height:16px;
+	display:inline-block;
+	margin-right:10px;
+	content:"";
+	-webkit-background-size: 100% 100%;
+	-moz-background-size:100% 100%;
+	-o-background-size:100% 100%;
+	background-size: cover;
+}
+
+
+
+
+::-webkit-input-placeholder {
+  font-family:lato;
+  font-size:1em;
+  font-weight:lighter;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #919191;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #919191;  
+}
+
+:-ms-input-placeholder {  
+   color: #919191;  
+}
+
+.faq-text {
+
+    text-align: left;
+    font-size:1.5em;
+    color:white;
+}
+
+.faq-text ul {
+    margin: 10px 0 10px 10px;
+    list-style: none;
+    color:silver;
+}
+
