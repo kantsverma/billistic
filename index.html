@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="ico/favicon.ico">
+		<title>Billistic.com | Online Bill Management</title>		
+		<!-- All required css -->
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/colorbox.css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">		
+		<!-- All required css -->
+		
+		<!-- All Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">				
+		
+		<!-- All required js  -->		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+		<script src="js/jquery.lazyload.js"></script>
+		<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>		
+		<script src="js/jquery.colorbox.js"></script>
+		<!-- slider swipe able script  -->
+		<script src="js/extras.js"></script>
+		<!-- All required js  -->
+		<script type="text/javascript">
+		$(function() {
+			//right side slide menu
+			$('nav#menu').mmenu();
+			
+			//Color box lightbox			
+			$(".youtube").colorbox({iframe:true,width:"90%",height:"90%", innerWidth:"90%", innerHeight:"90%"});
+			// make color box responsive 
+			// Make ColorBox responsive
+			jQuery.colorbox.settings.maxWidth  = '90%';
+			jQuery.colorbox.settings.maxHeight = '90%';
+
+			// ColorBox resize function
+			var resizeTimer;
+			function resizeColorBox()
+			{
+				if (resizeTimer) clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(function() {
+						if (jQuery('#cboxOverlay').is(':visible')) {
+								jQuery.colorbox.load(true);
+						}
+				}, 300);
+			}
+
+			// Resize ColorBox when resizing window or changing mobile device orientation
+			jQuery(window).resize(resizeColorBox);
+			window.addEventListener("orientationchange", resizeColorBox, false);				
+			
+			// home page slider 
+			$.supersized({
+				// Functionality
+				slide_interval          :   3000,		// Length between transitions
+				transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+				transition_speed		:	700,		// Speed of transition							   
+				// Components
+				slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+				slides 					:  	[			// Slideshow Images
+											{image : 'http://www.himsofts.com/billistic/img/home-hero-1-1920x1140.jpg', title : '<div class="slide-caption-header" >Take Financial Control</div><div></div><div class="slide-caption-text">Organizing bills becomes automatic and effortless.</div>', thumb : 'http://www.himsofts.com/billistic/img/home-hero-1-1920x1140.jpg', url : ''},
+											{image : 'http://www.himsofts.com/billistic/img/home-hero-2-1920x1140.jpg', title : '<div class="slide-caption-header" >Save Time and Money</div><div></div><div class="slide-caption-text">Manage and pay bills with just a few clicks.</div>', thumb : 'http://www.himsofts.com/billistic/img/home-hero-2-1920x1140.jpg', url : ''},  
+											{image : 'http://www.himsofts.com/billistic/img/home-hero-3-1920x1140.jpg', title : '<div class="slide-caption-header" >Set Billing Reminders</div><div></div><div class="slide-caption-text">Eliminate late fees - save money, improve credit score</div>', thumb : 'http://www.himsofts.com/billistic/img/home-hero-3-1920x1140.jpg', url : ''},
+											{image : 'http://www.himsofts.com/billistic/img/home-hero-4-1920x1140.jpg', title : '<div class="slide-caption-header" >Store Bills Indefinitely</div><div></div><div class="slide-caption-text">Instant access to any bill - go paperless, with confidence</div>', thumb : 'http://www.himsofts.com/billistic/img/home-hero-4-1920x1140.jpg', url : ''},
+											{image : 'http://www.himsofts.com/billistic/img/home-hero-5-1920x1140.jpg', title : '<div class="slide-caption-header" >Rest Assured</div><div></div><div class="slide-caption-text">Data & bills are secured by 256-bit AES encryption</div>', thumb : 'http://www.himsofts.com/billistic/img/home-hero-5-1920x1140.jpg', url : ''},
+											{image : 'http://www.himsofts.com/billistic/img/home-hero-6-1920x1140.jpg', title : '<div class="slide-caption-header" >Be Eco-Friendly</div><div></div><div class="slide-caption-text">No paper, no stamps, no effort, no kidding!</div>', thumb : 'http://www.himsofts.com/billistic/img/home-hero-6-1920x1140.jpg', url : ''},
+											{image : 'http://www.himsofts.com/billistic/img/home-hero-7-1920x1140.jpg', title : '<div class="slide-caption-header" >Go Billistic!</div><div></div><div class="slide-caption-text">Set up an account now.  Its fast, easy and free</div>', thumb : 'http://www.himsofts.com/billistic/img/home-hero-7-1920x1140.jpg', url : ''}
+											]
+			});	
+			// make the slider swipe able 
+			$(".swipe-target").swipe( {
+				//Generic swipe handler for all directions
+				swipe:function(event, direction, distance, duration, fingerCount) {
+					//console.log(direction);
+					if(direction == 'left'){ // prev slide
+						api.nextSlide();
+					}
+					if(direction == 'right'){ // prev slide
+						api.prevSlide();
+					}
+				},
+			   threshold:0
+			});
+			
+			// roll back the slides
+			$("#menuArrow").click(function() {
+				$("#menu").trigger("close.mm");
+			});
+		// lazy load 
+			$('#supersized img').lazyload({
+			  effect : "fadeIn"
+			});
+		});			
+	</script>
+	</head>
+	<body>
+		<div id="page">
+			<div class="header">
+				<a href="#menu" id="menuIcon"></a>
+				<div class="logo center">
+					<a href="/billistic"><img src="img/header_logo_bw.png" alt="Billistic" /></a>
+				</div>
+				<div class="menu-button pull-right">
+					<ul>
+						<li><a href="login.html" class="login-button hidden-xs">log in</a></li>
+						<li><a href="signup.html" class="sign-up-button hidden-xs">Sign up</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div class="swipe-target"></div><!-- target for swipe -->
+				<!-- home slider start here  -->	
+				<ul id="homeSlider"></ul>
+				<div class="slide-caption" id="slidecaption"></div>	
+				<div class="hero-buttons">
+				   <a class='youtube' href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent"><button class="login-button show-video" type="button">The Video</button></a>
+				   <a href="signup.html" ><button class="sign-up-button" type="button">Sign Up</button></a>
+					<br/>
+				</div>
+				<!--Arrow Navigation-->
+				<!--<a id="prevslide" class="load-item"></a>
+				<a id="nextslide" class="load-item"></a>-->
+				
+				<!--Time Bar-->
+				<!--<div id="progress-back" class="load-item">
+					<div id="progress-bar"></div>
+				</div>-->
+				
+				<!--Control Bar-->
+				<div id="controls-wrapper" class="load-item">
+					<div id="controls">			
+						<!--Navigation-->
+						<ul id="slide-list"></ul>
+					</div>
+				</div>
+			</div>
+			<!-- Right side menu bar start here-->
+			<nav id="menu">
+				<ul>
+					<li>
+						<a href="#menu" id="menuArrow">
+							<img src="img/arrow-89-xl.png" alt="Home" height="" width="">
+							<i></i>
+						</a>
+					</li>
+					<li>
+						<a href="login.html"><img src="img/login-xxl.png" alt="Login" height="24" width="24"><span>Login</span></a>
+					</li>					
+					<li>
+						<a href="signup.html"><img src="img/edit.png" alt="Sign Up" height="24" width="24"><span>Sign Up</span></a>
+					</li>					
+					<li>
+						<a href="services.html"><img src="img/note-2-xxl.png" alt="Service Plan" height="24" width="24"><span>Service Plan</span></a>
+					</li>
+					<li>
+						<a href="legal.html"><img src="img/Image25.png" alt="Legal Policy" height="24" width="24"><span>Legal Policy</span></a>
+					</li>					
+					<li>
+						<a href="faq.html"><img src="img/question-mark-xxl.png" alt="Help Center" height="24" width="24"><span>Help Center</span></a>
+					</li>	
+					<li>
+						<a href="about-us.html"><img src="img/logo-icon.png" alt="Help Center" height="24" width="24"><span>About Us</span></a>
+					</li>
+				</ul>
+			</nav>
+			<!-- Right side menu bar end here-->			
+		</div>
+	</body>
+</html>

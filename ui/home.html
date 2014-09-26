@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Billistic.com | Online Bill Management</title>
+
+    <!-- Google Fonts, Lato, Light, Normal and Bold. -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- FontAwesome css -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/sticky-footer-navbar.css" rel="stylesheet">
+
+     <!-- Styles for carousel -->
+    <link href="assets/css/carousel.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]
+  -->
+<style type="text/css">
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	height:100%;
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-color: #fff;
+}
+
+.navigation {
+	position:fixed;
+	height:75px;
+	width:100%;
+	background:rgb(0,0,0);
+	background: rgba(0,0,0,0.75);
+	border-bottom: 1px solid silver;
+	text-align: center;
+	padding-top:15px;
+	z-index: 3;
+}
+
+.center {
+	display:inline;
+	margin: auto;
+}
+
+.logo {
+	margin-top: 10px;
+	opacity:1;
+}
+
+nav > .menu-button {
+	margin: 10px 10px;
+}
+
+
+nav > .menu-button a {
+	color: white;
+	text-decoration: none;
+	font-size:1em;
+	font-weight:300;
+	margin-right:20px;
+}
+
+.sign-up-button {
+	background-color:#000;
+	border: 3px solid #a8ce39;
+	padding: 3px 5px 5px 5px;
+	border-radius: 3px;
+}
+/*
+.hero-carousel {
+	display:inline-block;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;
+	border:1px solid red;
+}
+.hero-slide {
+	display:inline-block;
+	height:100%;
+	text-align: center;
+}
+.hero-slide img {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:auto;
+	vertical-align: middle;
+}
+.hero-slide .headline {
+	position:relative;
+	display:block;
+	top:50%;
+	z-index: 3;
+	left:10%;
+}
+
+.hero-slide h1 {
+	color:white;
+	background: rgb(0,0,0);
+	background:rgba(0,0,0,.75);
+	padding:10px;
+	font-size:3em;
+	text-transform: uppercase;
+	text-align: center;
+}
+.hero-slide h2 {
+	color:black;
+	background: rgb(255,255,255);
+	background:rgba(255,255,255,1);
+	padding:10px;
+	font-size:1.5em;
+	text-transform: uppercase;
+	text-align: center;
+}
+@media(min-width:1200px){
+	.hero-carousel {
+		max-height: 80%;
+	}
+}
+
+@media(max-width:1200px){
+	.hero-carousel {
+		max-height: 50%;
+	}
+}
+
+@media(max-width:750px){
+	.hero-carousel {
+		max-height: 45%;
+	}
+}
+
+@media(max-width:530px){
+	.hero-carousel {
+		max-height: 35%;
+	}
+
+	.hero-slide img{
+		height:100%;
+	}
+}
+
+.hero-carousel {
+	display:block;
+	border:1px solid red;
+	position:absolute;
+	width:100%;
+}
+.hero-slide {
+	display:inline-block;
+	height:100%;
+}
+.hero-slide img {
+	position:absolute;
+	display:inline-block;
+	left:0;
+	top:0;
+	right:0;
+	width:100%;
+	height:auto;
+}
+*/
+.full-width {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:auto;
+	vertical-align: middle;
+}
+
+.hero-slide {
+	position:absolute;
+	display:inline-block;
+	top:0;
+	left:0;
+	padding:0;
+	text-align:center;
+}
+
+.hero-text {
+	position:relative;
+	top:-300px;
+}
+
+.hero-text .header{
+	color:#fff;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,.60);
+	margin:auto;
+	width:50%;
+	min-width:275px;
+	max-width:525px;
+	font-size:3em;
+	padding:0 10px;
+}
+
+.hero-text .subhead{
+	color:#000;
+	background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255,.60);
+	margin:auto;
+	width:50%;
+	min-width:275px;
+	max-width:525px;
+	font-size:1.7em;
+	padding: 0 5px;
+}
+
+.hero-text p{
+	color:#fff;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,.60);
+	margin:auto;
+	width:50%;
+	min-width:275px;
+	max-width:525px;
+	padding:0 5px;
+}
+
+.account-wizard .panel-default {
+	border-color:transparent;
+}
+</style>
+</head>
+<body>
+	<nav class="navigation">
+		<div class="menu-button pull-left"><a href="#"><i class="fa fa-bars"></i>&emsp;menu</a></div>
+		<div class="logo center"><a href="home.html"><img src="Uber_files/header_logo_bw.png" alt="" /></a></div>
+		<div class="menu-button pull-right">
+			<a href="#">log in</a>
+			<a href="#" class="sign-up-button" data-toggle="modal" data-target="#acct-wizard">sign up</a>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12 hero-slide active">
+				<img class="img-responsive" src="assets/images/home-hero-1-1440-900.jpg" alt="" />
+				<div class="hero-text">
+					<div class="header">Bill Management:</div>
+					<div class="subhead">Simplified &amp; Supercharged!</div>
+					<p>Setup an account in minutes and organizing bills becomes convenient and effortless</p>
+				</div>
+			</div>
+			<div class="col-lg-12 hero-slide">
+				<img class="img-responsive" src="assets/images/home-hero-2-1440-900.jpg" alt="" />
+				<div class="hero-text">
+					<div class="header">Bill Management:</div>
+					<div class="subhead">Simplified &amp; Supercharged!</div>
+					<p>Setup an account in minutes and organizing bills becomes convenient and effortless</p>
+				</div>
+			</div>
+			<div class="col-lg-12 hero-slide">
+				<img class="img-responsive" src="assets/images/home-hero-3-1440-900.jpg" alt="" />
+				<div class="hero-text">
+					<div class="header">Bill Management:</div>
+					<div class="subhead">Simplified &amp; Supercharged!</div>
+					<p>Setup an account in minutes and organizing bills becomes convenient and effortless</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4">
+				<div class="row">
+					<div class="col-lg-4">hello</div>
+					<div class="col-lg-4">hello</div>
+					<div class="col-lg-4">hello</div>
+				</div>
+			</div>
+			<div class="col-lg-4"></div>
+		</div>
+	</div>
+
+	<!--
+	<section class="hero-carousel container-fluid">
+		<article class="hero-slide" style="">
+			<img src="assets/images/home-hero-1-1440-900.jpg" alt="" />
+			<div class="headline">
+				<h1>Bill management:</h1>
+				<h2>Simplified &amp; Supercharged!</h2>
+			</div>
+		</article>
+		<article class="hero-slide" style="display:none">
+			<img src="assets/images/home-hero-2-1440-900.jpg" alt="" />
+		</article>
+		<article class="hero-slide" style="display:none">
+			<img src="assets/images/home-hero-3-1440-900.jpg" alt="" />
+		</article>
+		<article class="hero-slide" style="display:none">
+			<img src="assets/images/home-hero-4-1440-900.jpg" alt="" />
+		</article>
+	</section>
+	-->
+	<div class="modal fade" id="acct-wizard" tabindex="-1" role="dialog" aria-labelledby="acct-wiz-label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content account-wizard">
+				
+		              <div class="panel panel-default">
+		                <div class="panel-heading">
+		                	Setup Your Account - Step <span class="badge">1</span> of <span class="totalSteps">4</span>
+		                	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                </div>
+		                <div class="panel-body">
+		                  <form id="account-wizard-step-1">
+		                    <h4>Who are you?</h4>
+		                    <input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name" />
+		                    <input class="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" />
+		                    <input class="form-control" type="email" id="email" name="email" placeholder="Email Address" />
+		                  </form>
+		                  <form id="account-wizard-step-2">
+		                    <h4>How do we notify you?</h4>
+		                    <input class="form-control" type="tel" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number for Text Notify" />
+		                    <div class="input-group">
+		                      <input type="text" class="form-control" id="mobileType" name="mobileType" placeholder="Mobile Device Type">
+		                      <div class="input-group-btn">
+		                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+		                        <ul class="dropdown-menu pull-right">
+		                          <li><a href="#">Type one</a></li>
+		                          <li><a href="#">Type two</a></li>
+		                          <li><a href="#">Type three</a></li>
+		                          <li class="divider"></li>
+		                          <li><a href="#">Special case</a></li>
+		                        </ul>
+		                      </div><!-- /btn-group -->
+		                    </div>
+		                    <input class="form-control" type="text" id="notificationMethod" name="notificationMethod" placeholder="Preferred Notification Method" />
+		                    <input class="form-control" type="email" id="billisticEmail" name="billisticEmail" placeholder="Billistic Email Address - Billers to Use" />
+		                  </form>
+		                  <form id="account-wizard-step-3">
+		                    <h4>Account Security</h4>
+		                    <input class="form-control" type="text" id="username" name="username" placeholder="User Name or Email" />
+		                    <input class="form-control" type="password" id="password" name="password" placeholder="Password" />
+		                    <div class="input-group">
+		                      <input type="text" class="form-control" placeholder="Select Challenge Question">
+		                      <div class="input-group-btn">
+		                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+		                        <ul class="dropdown-menu pull-right">
+		                          <li><a href="#">What's the zip code for the hospital you were born in?</a></li>
+		                          <li><a href="#">Who's your great grandfather's favorite comedian</a></li>
+		                          <li><a href="#">What is the middle name of your third-cousin twice-removed?</a></li>
+		                          <li><a href="#">Who is the favorite artist of your first pet?</a></li>
+		                        </ul>
+		                      </div><!-- /btn-group -->
+		                    </div>
+		                    <input class="form-control" type="text" id="challengeAnswer" name="challengeAnswer" placeholder="Challenge Answer" />
+		                  </form>
+		                  <form id="account-wizard-step-4">
+		                    <h4>Who Sends you Bills?</h4>
+		                    <div class="input-group">
+		                      <input type="text" class="form-control" placeholder="Enter Name of Company that Bills You">
+		                      <div class="input-group-btn">
+		                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
+		                        <ul class="dropdown-menu pull-right">
+		                          <li><a href="#">AT&T Wireless</a></li>
+		                          <li><a href="#">Aurora Water</a></li>
+		                          <li><a href="#">Chrysler Credit</a></li>
+		                          <li><a href="#">Comcast</a></li>
+		                          <li><a href="#">SallieMae College Loan</a></li>
+		                          <li><a href="#">Xcel Energy</a></li>
+		                          <li><a href="#">Verizon Business</a></li>
+		                          <li><a href="#">Verizon Communications</a></li>
+		                          <li><a href="#">Verizon Online</a></li>
+		                          <li><a href="#">Verizon Wireless</a></li>
+		                        </ul>
+		                      </div><!-- /btn-group -->
+		                    </div>
+		                  </form>
+		                  <ul class="pager">
+		                    <li><a href="#"><span class="left-pgbtn">Cancel</span></a></li>
+		                    <li><a href="#"><span class="right-pgbtn">Next</span></a></li>
+		                  </ul>
+		              </div>
+		            </div>
+		        
+		    </div>
+	    </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+</script>
+<script type="text/javascript">
+function initAcctWizard(){
+    var $wiz = $('.account-wizard');
+
+    $wiz.find('form:not(:first)').hide();
+    $wiz.data('page',1);
+
+    $wiz.find('.left-pgbtn').on('click',function(e){
+      var $wiz = $(this).parents('.account-wizard'),
+          page = $wiz.data('page'),
+          prev = page-1;
+
+      if(page > 1){
+
+        if(prev == 1){
+         $wiz.find('.left-pgbtn').text('Cancel');
+        } else {
+          $wiz.find('.left-pgbtn').text('Back');
+          $wiz.find('.right-pgbtn').text('Next');
+        }
+
+        var prevStep = '#account-wizard-step-'+prev,
+            currStep = '#account-wizard-step-'+page;
+        $wiz.find(currStep).fadeOut(400,function(){
+          $wiz.find('.badge').empty().text( prev );
+          $wiz.find(prevStep).fadeIn();
+        });
+        $wiz.data('page',prev);
+      }
+    });
+
+    $wiz.find('.right-pgbtn').on('click',function(e){
+      var $wiz = $(this).parents('.account-wizard'),
+          page = $wiz.data('page'),
+          next = page+1,
+          max  = $wiz.find('form').length;
+
+        
+        if( page < max ){
+          var currStep = '#account-wizard-step-'+page,
+              nextStep = '#account-wizard-step-'+next;
+
+          $wiz.find(currStep).fadeOut(400,function(){
+
+            if(next === max){
+              $wiz.find('.right-pgbtn').text('Finish');
+            } else {
+             $wiz.find('.right-pgbtn').text('Next');
+             $wiz.find('.left-pgbtn').text('Back');
+            }
+
+            $wiz.find('.badge').empty().text( next );
+            $wiz.find(nextStep).fadeIn();
+          });
+          
+          $wiz.data('page',next);
+
+        } else if(page == max) {
+
+            $('.account-wizard form').each(function(i,form){
+              console.log($(form).serialize())
+            });
+        }
+    });
+
+
+  }
+
+  $(function(){
+    $('.landing-buttons input').on('click',function(e){
+      e.preventDefault();
+      e.stopPropagation();
+    })
+
+    initAcctWizard();
+  });
+</script>
+</body>
+</html>
